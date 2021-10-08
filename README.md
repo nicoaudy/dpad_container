@@ -6,7 +6,7 @@ Dpad container focus navigation support for android TV.
 
 In your flutter or dart project add the dependency:
 
-``` yml
+```yml
 dependencies:
   ...
   dpad_container:
@@ -17,7 +17,7 @@ For help getting started with Flutter, view the online
 
 ## Usage example
 
-``` dart
+```dart
 import 'package:dpad_container/dpad_container.dart';
 ```
 
