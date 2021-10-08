@@ -1,15 +1,23 @@
 # dpad_container
 
-Dpad container focus navigation support for android TV
+Dpad container focus navigation support for android TV.
+👋 Any help is appreciated! Comment, suggestions, issues, PR's!
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+In your flutter or dart project add the dependency:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+``` yml
+dependencies:
+  ...
+  dpad_container:
+```
 
+For help getting started with Flutter, view the online
+[documentation](https://flutter.io/).
+
+## Usage example
+
+``` dart
+import 'package:dpad_container/dpad_container.dart';
+```
