@@ -1,7 +1,6 @@
 name: dpad_container
 description: Dpad container focus navigation support for android TV
 version: 1.0.0
-author: Nico Audy<codycanbe20@gmail.com>
 homepage: https://github.com/nicoaudy/dpad_container
 
 environment:
