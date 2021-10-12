@@ -1,11 +1,11 @@
 name: dpad_container
-description: Dpad container focus navigation support for android TV
-version: 1.0.0
+description: Dpad container focus navigation support for android TV. Allow you to navigate widgets and get focused, just wrap your widget and that's it!
+version: 1.0.1
 homepage: https://github.com/nicoaudy/dpad_container
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: '>=1.20.0'
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
