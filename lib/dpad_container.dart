@@ -1,5 +1,5 @@
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 const String keyUp = 'Arrow Up';
 const String keyDown = 'Arrow Down';
@@ -7,7 +7,7 @@ const String keyLeft = 'Arrow Left';
 const String keyRight = 'Arrow Right';
 const String keyCenter = 'Select';
 
-class DpadContainer extends StatefulWidget {
+class DpadContainer extends HookWidget {
   final Function onClick;
   final Function(bool isFocused) onFocus;
   final Widget child;
@@ -20,63 +20,21 @@ class DpadContainer extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    return DpadContainerState();
-  }
-}
-
-class DpadContainerState extends State<DpadContainer> {
-  List<FocusNode> focusNodes = [];
-  late FocusNode node;
-  bool isFocused = false;
-
-  @override
-  void initState() {
-    super.initState();
-    node = FocusNode();
-  }
-
-  void _handleFocusChange() {
-    if (node.hasFocus != isFocused) {
-      setState(() {
-        isFocused = node.hasFocus;
-      });
-    }
-  }
-
-  @override
-  void dispose() {
-    node.removeListener(_handleFocusChange);
-    node.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return RawKeyboardListener(
-      child: widget.child,
-      focusNode: node,
-      onKey: (RawKeyEvent event) {
-        setState(() {
-          isFocused = !isFocused;
-        });
-
-        widget.onFocus(isFocused);
-
-        if (event is RawKeyDownEvent && event.data is RawKeyEventDataAndroid) {
-          switch (event.logicalKey.keyLabel) {
-            case keyCenter:
-              widget.onClick();
-              break;
-            case keyUp:
-              break;
-            case keyDown:
-              break;
-            default:
-              break;
-          }
+    var node = useFocusNode;
+    var isFocused = useState(false);
+    return KeyboardListener(
+      focusNode: node.call(),
+      onKeyEvent: (KeyEvent event) {
+        var label = event.logicalKey.keyLabel;
+        if (label == keyCenter) {
+          onClick;
+        } else {
+          isFocused.value = !(isFocused.value);
+          onFocus(isFocused.value);
         }
       },
+      child: child,
     );
   }
 }
