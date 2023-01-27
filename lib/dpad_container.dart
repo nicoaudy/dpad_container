@@ -28,7 +28,7 @@ class DpadContainer extends HookWidget {
       onKeyEvent: (KeyEvent event) {
         var label = event.logicalKey.keyLabel;
         if (label == keyCenter) {
-          onClick;
+          onClick();
         } else {
           isFocused.value = !(isFocused.value);
           onFocus(isFocused.value);
