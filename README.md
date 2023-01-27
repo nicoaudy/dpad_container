@@ -9,7 +9,7 @@ In your flutter or dart project add the dependency:
 ```yml
 dependencies:
   ...
-  dpad_container: ^1.0.1
+  dpad_container: ^2.0.0
 ```
 
 For help getting started with Flutter, view the online
