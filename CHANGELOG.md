@@ -1,3 +1,8 @@
+## [2.0.1] - 27/01/2023
+
+- Fix onclick behavior
+- Update example
+
 ## [2.0.0] - 27/01/2023
 
 - Upgrade to support latest flutter
