@@ -8,7 +8,7 @@ const String keyLeft = 'Arrow Left';
 const String keyRight = 'Arrow Right';
 const String keyCenter = 'Select';
 
-/// 
+///
 /// Using Hooks instead of statefull builder
 /// Make coding looks nice and compact
 class DpadContainer extends HookWidget {
@@ -36,7 +36,7 @@ class DpadContainer extends HookWidget {
       onKeyEvent: (KeyEvent event) {
         /// Action label
         var label = event.logicalKey.keyLabel;
-        
+
         /// If label equal to Key Event which arrow up, down, right, left or on Enter
         if (label == keyCenter) {
           onClick();
