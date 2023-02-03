@@ -1,3 +1,7 @@
+## [2.0.2] - 03/02/2023
+
+- Add code block documentation
+
 ## [2.0.1] - 27/01/2023
 
 - Fix onclick behavior
