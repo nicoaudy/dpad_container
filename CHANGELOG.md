@@ -1,3 +1,9 @@
+## [2.0.3] - 03/02/2023
+
+- Code formatting standard
+- Update sample
+- Update Readme & Changelog
+
 ## [2.0.2] - 03/02/2023
 
 - Add code block documentation
