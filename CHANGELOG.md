@@ -1,3 +1,7 @@
+## [2.0.4] - 20/06/2023
+
+- Fix double on click event
+
 ## [2.0.3] - 03/02/2023
 
 - Code formatting standard
